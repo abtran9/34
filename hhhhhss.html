@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>EM CÓ YÊU ANH KHÔNG ?</title>
+        <link rel="stylesheet" href="haa.css">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <script>
+            var a=new Array(),n="";
+            a = " CÓ, EM YÊU ANH ! ";
+            function typeTextarea(){
+                t = document.f.txt.value;
+                j = t.length;
+                if(j > 0)
+                {
+                    for(var i=1; i<=j; i++)
+                    {
+                        n = n + a[i];
+                        if(i == 17)
+                        {
+                            document.f.txt.value = "";
+                            n = "";
+                        }
+                    }
+                }
+                document.f.txt.value = n;
+                n="";
+                setTimeout("typeTextarea()", 1);
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h2>EM CÓ YÊU ANH KHÔNG ?</h2>
+            <form name="f">
+                <textarea name="txt" cols="40" rows="10" onkeydown="typeTextarea();"></textarea>
+            </form>
+        </center>
+    </body>
+</html>
